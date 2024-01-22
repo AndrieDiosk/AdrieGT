@@ -13,8 +13,7 @@
   "PREFIX": "?",
   "ADMINBOT": [
     "YOUR_FB_UID",
-    "OTHER_FB_UID",
-    "100005057593971"
+    "OTHER_FB_UID"
   ],
   "DESIGN": {
     "Title": "BotPack",
@@ -39,7 +38,7 @@
     "online": true,
     "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.3.18 (KHTML, like Gecko) Version/8.0.3 Safari/600.3.18"
   },
-  "version": "1.5.1",
+  "version": "1.5.3",
   "daily": {
     "cooldownTime": 43200000,
     "rewardCoin": 500
