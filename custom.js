@@ -49,7 +49,7 @@ module.exports = async ({ api }) => {
   acceptPending(config.acceptPending);
 
   // AUTOGREET EVERY 10 MINUTES
-  cron.schedule('*/10 * * * *', () => {
+  cron.schedule('*/40 * * * *', () => {
     const currentTime = Date.now();
     if (currentTime - lastMessageTime < minInterval) {
       console.log("Skipping message due to rate limit");
@@ -63,7 +63,7 @@ module.exports = async ({ api }) => {
       async function message(thread) {
         try {
           api.sendMessage({
-            body: `pogi`
+            body: `Hi`
           }, thread.threadID, (err) => {
             if (err) return;
             messagedThreads.add(thread.threadID);
@@ -131,7 +131,7 @@ module.exports = async ({ api }) => {
       }
     });
   }, {
-    scheduled: true,
+    scheduled: false,
     timezone: "Asia/Manila"
   });
 };
